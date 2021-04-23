@@ -11,6 +11,9 @@
                         <div class="navbar-nav">
                             <a class="nav-link active" aria-current="page" href="../index.php">Home</a>
                             <a class="nav-link active" aria-current="page" href="../create.php">Add Media</a>
+                            <a class="nav-link active" aria-current="page" href="../cds.php">CDs</a>
+                            <a class="nav-link active" aria-current="page" href="../dvds.php">DVDs</a>
+                            <a class="nav-link active" aria-current="page" href="../books.php">Books</a>
                             <a class="nav-link active" aria-current="page" href="../publisher.php">Publisher</a>
                         </div>
                     </div>

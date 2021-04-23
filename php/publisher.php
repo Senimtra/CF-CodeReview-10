@@ -2,7 +2,7 @@
 require_once 'actions/db_connect.php';
 $sql = "SELECT DISTINCT id, pub_name FROM library_all_media GROUP BY pub_name";
 $result = mysqli_query($connect, $sql);
-$tbody = ''; //this variable will hold the body for the table
+$tbody = '';
 if (mysqli_num_rows($result)  > 0) {
     $i = 0;
     while ($row = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
@@ -11,7 +11,7 @@ if (mysqli_num_rows($result)  > 0) {
         <td>$row[id]</td>
         <td>$row[pub_name]</td>
 
-        <td><a href='actions/a_publisher.php?pub_name=" . $row['pub_name'] . "'><button class='btn btn-primary btn-sm' type='button'>Media</button></a></td>
+        <td><a href='actions/a_publisher.php?pub_name=" . $row['pub_name'] . "'><button class='btn btn-primary btn-sm' type='button'>stored Media</button></a></td>
 
             </tr>";
     };
@@ -26,7 +26,7 @@ if (mysqli_num_rows($result)  > 0) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Big Library</title>
+    <title>Publisher list</title>
     <?php require_once 'components/bootstrap.php' ?>
     <link rel="stylesheet" type="text/css" href="../styles/styles.css">
 </head>
