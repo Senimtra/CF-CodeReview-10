@@ -8,6 +8,17 @@ if ($_GET['id']) {
     if ($result->num_rows == 1) {
         $data = $result->fetch_assoc();
         $media_title = $data['media_title'];
+        $media_type = $data['media_type'];
+        $media_date = $data['media_date'];
+        $media_isbn = $data['media_isbn'];
+        $media_descr = $data['media_descr'];
+        $media_image = $data['media_image'];
+        $media_status = $data['media_status'];
+        $author_fname = $data['author_fname'];
+        $author_lname = $data['author_lname'];
+        $pub_name = $data['pub_name'];
+        $pub_address = $data['pub_address'];
+        $pub_size = $data['pub_size'];
     } else {
         header("location: error.php");
     }
@@ -29,22 +40,71 @@ if ($_GET['id']) {
 </head>
 
 <body>
-    <fieldset>
-        <form action="actions/a_update.php" method="post" enctype="multipart/form-data">
-            <table class="table">
-                <tr>
-                    <th>Media Name</th>
-                    <td><input class='form-control' type="text" name="m_name" placeholder="Name of the media" value="<?php echo $media_title ?>" /></td>
-                </tr>
-                <tr>
-                    <input type="hidden" name="id" value="<?php echo $data['id'] ?>" />
-                    <input type="hidden" name="picture" value="<?php echo $data['media_image'] ?>" />
-                    <td><button class="btn btn-success" type="submit">Save Changes</button></td>
-                    <td><a href="index.php"><button class="btn btn-warning" type="button">Back</button></a></td>
-                </tr>
-            </table>
-        </form>
-    </fieldset>
+    <?php include_once "header.php" ?>
+    <?php include_once "navbar.php" ?>
+    <div class="container-fluid mx-auto px-5">
+        <div class="wrapIndex mx-5 bg-secondary">
+            <form action="actions/a_update.php" method="post" enctype="multipart/form-data">
+                <table class="table">
+                    <tr>
+                        <th>Media Name</th>
+                        <td><input class='form-control' type="text" name="m_name" placeholder="Name of the media" value="<?php echo $media_title ?>" /></td>
+                    </tr>
+                    <tr>
+                        <th>Media Type</th>
+                        <td><input class='form-control' type="text" name="m_type" placeholder="Type of the media" value="<?php echo $media_type ?>" /></td>
+                    </tr>
+                    <tr>
+                        <th>Release (Year)</th>
+                        <td><input class='form-control' type="number" name="m_date" placeholder="Year of release" value="<?php echo $media_date ?>" /></td>
+                    </tr>
+                    <tr>
+                        <th>ISBN-code</th>
+                        <td><input class='form-control' type="text" name="m_isbn" placeholder="ISBN-code of the media" value="<?php echo $media_isbn ?>" /></td>
+                    </tr>
+                    <tr>
+                        <th>Description</th>
+                        <td><input class='form-control' type="text" name="m_descr" placeholder="Short description" value="<?php echo $media_descr ?>" /></td>
+                    </tr>
+                    <tr>
+                        <th>Image (Url)</th>
+                        <td><input class='form-control' type="text" name="m_image" placeholder="Image-Url of the media" value="<?php echo $media_image ?>" /></td>
+                    </tr>
+                    <tr>
+                        <th>Availability</th>
+                        <td><input class='form-control' type="text" name="m_status" placeholder="available / reserved" value="<?php echo $media_status ?>" /></td>
+                    </tr>
+                    <tr>
+                        <th>Author first name</th>
+                        <td><input class='form-control' type="text" name="a_fname" placeholder="First name of the author" value="<?php echo $author_fname ?>" /></td>
+                    </tr>
+                    <tr>
+                        <th>Author last name</th>
+                        <td><input class='form-control' type="text" name="a_lname" placeholder="Last name of the author" value="<?php echo $author_lname ?>" /></td>
+                    </tr>
+                    <tr>
+                        <th>Publisher name</th>
+                        <td><input class='form-control' type="text" name="p_name" placeholder="Name of the publisher" value="<?php echo $pub_name ?>" /></td>
+                    </tr>
+                    <tr>
+                        <th>Publisher address</th>
+                        <td><input class='form-control' type="text" name="p_address" placeholder="Address of the publisher" value="<?php echo $pub_address ?>" /></td>
+                    </tr>
+                    <tr>
+                        <th>Publisher size</th>
+                        <td><input class='form-control' type="text" name="p_size" placeholder="Size of the publisher" value="<?php echo $pub_size ?>" /></td>
+                    </tr>
+                    <tr>
+                        <input type="hidden" name="id" value="<?php echo $data['id'] ?>" />
+                        <input type="hidden" name="picture" value="<?php echo $data['media_image'] ?>" />
+                        <td><button class="btn btn-success" type="submit">Save Changes</button></td>
+                        <td><a href="index.php"><button class="btn btn-warning" type="button">Back</button></a></td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+    </div>
+    <?php include_once "footer.php" ?>
 </body>
 
 </html>

@@ -2,10 +2,21 @@
 require_once 'db_connect.php';
 
 if ($_POST) {
-    $name = $_POST['m_name'];
     $id = $_POST['id'];
+    $media_title = $_POST['m_name'];
+    $media_type = $_POST['m_type'];
+    $media_date = $_POST['m_date'];
+    $media_isbn = $_POST['m_isbn'];
+    $media_descr = $_POST['m_descr'];
+    $media_image = $_POST['m_image'];
+    $media_status = $_POST['m_status'];
+    $author_fname = $_POST['a_fname'];
+    $author_lname = $_POST['a_lname'];
+    $pub_name = $_POST['p_name'];
+    $pub_address = $_POST['p_address'];
+    $pub_size = $_POST['p_size'];
 
-    $sql = "UPDATE library_all_media SET media_title = '$name' WHERE id = {$id}";
+    $sql = "UPDATE library_all_media SET media_title = '$media_title', media_type = '$media_type', media_date = '$media_date', media_isbn = '$media_isbn', media_descr = '$media_descr', media_image = '$media_image', media_status = '$media_status', author_fname = '$author_fname', author_lname = '$author_lname', pub_name = '$pub_name', pub_address = '$pub_address', pub_size = '$pub_size' WHERE id = {$id}";
 
     if ($connect->query($sql) === TRUE) {
         $class = "success";
