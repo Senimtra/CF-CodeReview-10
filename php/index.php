@@ -14,7 +14,8 @@ if (mysqli_num_rows($result)  > 0) {
         <td>$row[media_title]<br>$row[media_type]<br>$row[media_date]</td>
         <td>$row[media_descr]</td>
         <td><a href='delete.php?id=" . $row['id'] . "'><button class='btn btn-danger btn-sm' type='button'>Delete</button></a></td>
-        <td><a href='update.php?id=" . $row['id'] . "'><button class='btn btn-danger btn-sm' type='button'>Update</button></a></td>
+        <td><a href='update.php?id=" . $row['id'] . "'><button class='btn btn-warning btn-sm' type='button'>Update</button></a></td>
+        <td><a href='details.php?id=" . $row['id'] . "'><button class='btn btn-success btn-sm' type='button'>Show Media</button></a></td>
             </tr>";
         } else {
             break;
