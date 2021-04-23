@@ -33,6 +33,7 @@ if ($_POST) {
 
 <body>
     <?php include_once "../header.php" ?>
+    <?php include_once "../navbar.php" ?>
     <div class="container-fluid mx-auto px-5">
         <div class="wrapIndex mx-5 bg-secondary">
             <div class="mt-3 mb-3">

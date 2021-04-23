@@ -44,12 +44,10 @@ $connect->close();
 
 <body>
     <?php include_once "header.php" ?>
+    <?php include_once "navbar.php" ?>
     <div class="container-fluid mx-auto px-5">
         <div class="wrapIndex mx-5 bg-secondary">
-            <!-- <div class='mb-3'>
-            <a href="create.php"><button class='btn btn-primary' type="button">Add product</button></a>
-        </div>
-        <p class='h2'>Produfffcts</p> -->
+
             <table class='table table-striped'>
                 <!-- <thead class='table-success'>
                 <tr>
