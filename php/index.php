@@ -4,13 +4,19 @@ $sql = "SELECT * FROM library_all_media";
 $result = mysqli_query($connect, $sql);
 $tbody = ''; //this variable will hold the body for the table
 if (mysqli_num_rows($result)  > 0) {
+    $i = 0;
     while ($row = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
-        $tbody .= "<tr>
+        $i++;
+        if ($i < 5) {
+            $tbody .= "<tr>
         <td>$row[id]</td>
         <td><img src='$row[media_image]'></td>
         <td>$row[media_title]<br>$row[media_type]<br>$row[media_date]</td>
         <td>$row[media_descr]</td>
             </tr>";
+        } else {
+            break;
+        }
 
         /* <td><img class='img-thumbnail' src='pictures/" . $row['picture'] . "'</td>
             <td>" . $row['name'] . "</td>
@@ -37,13 +43,15 @@ $connect->close();
 </head>
 
 <body>
-    <div class="manageProduct w-75 mt-3">
-        <!-- <div class='mb-3'>
+    <?php include_once "header.php" ?>
+    <div class="container-fluid mx-auto px-5">
+        <div class="wrapHero m-5 mb-0 bg-secondary">
+            <!-- <div class='mb-3'>
             <a href="create.php"><button class='btn btn-primary' type="button">Add product</button></a>
         </div>
         <p class='h2'>Produfffcts</p> -->
-        <table class='table table-striped'>
-            <!-- <thead class='table-success'>
+            <table class='table table-striped'>
+                <!-- <thead class='table-success'>
                 <tr>
                     <th>Picture</th>
                     <th>Name</th>
@@ -51,10 +59,11 @@ $connect->close();
                     <th>Action</th>
                 </tr>
             </thead> -->
-            <tbody>
-                <?= $tbody; ?>
-            </tbody>
-        </table>
+                <tbody>
+                    <?= $tbody; ?>
+                </tbody>
+            </table>
+        </div>
     </div>
 </body>
 
