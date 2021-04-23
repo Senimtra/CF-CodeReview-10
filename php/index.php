@@ -7,22 +7,22 @@ if (mysqli_num_rows($result)  > 0) {
     $i = 0;
     while ($row = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
         $i++;
-        if ($i < 5) {
+        if ($i < 100) {
             $tbody .= "<tr>
         <td>$row[id]</td>
         <td><img src='$row[media_image]'></td>
         <td>$row[media_title]<br>$row[media_type]<br>$row[media_date]</td>
         <td>$row[media_descr]</td>
+        <td><a href='delete.php?id=" . $row['id'] . "'><button class='btn btn-danger btn-sm' type='button'>Delete</button></a></td>
+
             </tr>";
         } else {
             break;
         }
 
         /* <td><img class='img-thumbnail' src='pictures/" . $row['picture'] . "'</td>
-            <td>" . $row['name'] . "</td>
-            <td>" . $row['price'] . "</td>
             <td><a href='update.php?id=" . $row['id'] . "'><button class='btn btn-primary btn-sm' type='button'>Edit</button></a>
-            <a href='delete.php?id=" . $row['id'] . "'><button class='btn btn-danger btn-sm' type='button'>Delete</button></a></td> */
+             */
     };
 } else {
     $tbody =  "<tr><td colspan='5'><center>No Data Available </center></td></tr>";
@@ -45,7 +45,7 @@ $connect->close();
 <body>
     <?php include_once "header.php" ?>
     <div class="container-fluid mx-auto px-5">
-        <div class="wrapHero m-5 mb-0 bg-secondary">
+        <div class="wrapIndex mx-5 bg-secondary">
             <!-- <div class='mb-3'>
             <a href="create.php"><button class='btn btn-primary' type="button">Add product</button></a>
         </div>

@@ -4,14 +4,41 @@ html {
 }
 
 tbody tr td img {
-  width: 6rem;
+  width: 4rem;
 }
 
 #heroImg {
   border: 10px solid red;
+  background-image: url("../images/header.jpg");
+  padding-bottom: 30%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
 }
 
 img {
   border: 1px solid blue;
+}
+
+#footer {
+  border: 10px solid red;
+  height: 10vh;
+}
+
+.container-fluid {
+  border: 2px solid green;
+  overflow: hidden;
+}
+
+.table {
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+}
+
+.wrapIndex {
+  border-left: 10px solid red;
+  border-right: 10px solid red;
+  overflow: hidden;
 }
 /*# sourceMappingURL=styles.css.map */
