@@ -19,19 +19,55 @@
                 <form action="actions/a_create.php" method="post">
                     <table class='table'>
                         <tr>
-                            <th>Name</th>
-                            <td><input class='form-control' type="text" name="name" placeholder="Product Name" /></td>
+                            <th>Media Name</th>
+                            <td><input class='form-control' type="text" name="m_name" placeholder="Name of the media" /></td>
                         </tr>
                         <tr>
-                            <th>Price</th>
-                            <td><input class='form-control' type="number" name="price" placeholder="Price" step="any" /></td>
+                            <th>Media Type</th>
+                            <td><input class='form-control' type="text" name="m_type" placeholder="Type of the media" /></td>
                         </tr>
                         <tr>
-                            <th>Picture</th>
-                            <td><input class='form-control' type="file" name="picture" /></td>
+                            <th>Release (Year)</th>
+                            <td><input class='form-control' type="number" name="m_date" placeholder="Year of release" /></td>
                         </tr>
                         <tr>
-                            <td><button class='btn btn-success' type="submit">Insert Product</button></td>
+                            <th>ISBN-code</th>
+                            <td><input class='form-control' type="text" name="m_isbn" placeholder="ISBN-code of the media" /></td>
+                        </tr>
+                        <tr>
+                            <th>Description</th>
+                            <td><input class='form-control' type="text" name="m_descr" placeholder="Short description" /></td>
+                        </tr>
+                        <tr>
+                            <th>Image (Url)</th>
+                            <td><input class='form-control' type="text" name="m_image" placeholder="Image-Url of the media" /></td>
+                        </tr>
+                        <tr>
+                            <th>Availability</th>
+                            <td><input class='form-control' type="text" name="m_status" placeholder="available / reserved" /></td>
+                        </tr>
+                        <tr>
+                            <th>Author first name</th>
+                            <td><input class='form-control' type="text" name="a_fname" placeholder="First name of the author" /></td>
+                        </tr>
+                        <tr>
+                            <th>Author last name</th>
+                            <td><input class='form-control' type="text" name="a_lname" placeholder="Last name of the author" /></td>
+                        </tr>
+                        <tr>
+                            <th>Publisher name</th>
+                            <td><input class='form-control' type="text" name="p_name" placeholder="Name of the publisher" /></td>
+                        </tr>
+                        <tr>
+                            <th>Publisher address</th>
+                            <td><input class='form-control' type="text" name="p_address" placeholder="Address of the publisher" /></td>
+                        </tr>
+                        <tr>
+                            <th>Publisher size</th>
+                            <td><input class='form-control' type="text" name="p_size" placeholder="Size of the publisher" /></td>
+                        </tr>
+                        <tr>
+                            <td><button class='btn btn-success' type="submit">Insert media</button></td>
                             <td><a href="index.php"><button class='btn btn-warning' type="button">Home</button></a></td>
                         </tr>
                     </table>

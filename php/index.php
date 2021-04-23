@@ -47,16 +47,7 @@ $connect->close();
     <?php include_once "navbar.php" ?>
     <div class="container-fluid mx-auto px-5">
         <div class="wrapIndex mx-5 bg-secondary">
-
             <table class='table table-striped'>
-                <!-- <thead class='table-success'>
-                <tr>
-                    <th>Picture</th>
-                    <th>Name</th>
-                    <th>price</th>
-                    <th>Action</th>
-                </tr>
-            </thead> -->
                 <tbody>
                     <?= $tbody; ?>
                 </tbody>
