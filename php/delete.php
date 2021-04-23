@@ -8,8 +8,6 @@ if ($_GET['id']) {
     $data = $result->fetch_assoc();
     if ($result->num_rows == 1) {
         $name = $data['media_title'];
-        $price = $data['media_title'];
-        $picture = $data['media_type'];
     } else {
         header("location: error.php");
     }
@@ -35,23 +33,21 @@ if ($_GET['id']) {
     <?php include_once "navbar.php" ?>
     <div class="container-fluid mx-auto px-5">
         <div class="wrapIndex mx-5 bg-secondary">
-            <fieldset>
-                <legend class='h2 mb-3'>Delete request <img class='img-thumbnail rounded-circle' src='pictures/<?php echo $picture ?>' alt="<?php echo $name ?>"></legend>
-                <h5>You have selected the data below:</h5>
-                <table class="table w-75 mt-3">
-                    <tr>
-                        <td><?php echo $id . $name ?></td>
-                    </tr>
-                </table>
 
-                <h3 class="mb-4">Do you really want to delete this product?</h3>
-                <form action="actions/a_delete.php" method="post">
-                    <input type="hidden" name="id" value="<?php echo $id ?>" />
-                    <input type="hidden" name="picture" value="<?php echo $picture ?>" />
-                    <button class="btn btn-danger" type="submit">Yes, delete it!</button>
-                    <a href="index.php"><button class="btn btn-warning" type="button">No, go back!</button></a>
-                </form>
-            </fieldset>
+            <h5>You have selected the data below:</h5>
+            <table class="table w-75 mt-3">
+                <tr>
+                    <td><?php echo $name ?></td>
+                </tr>
+            </table>
+
+            <h3 class="mb-4">Do you really want to delete this product?</h3>
+            <form action="actions/a_delete.php" method="post">
+                <input type="hidden" name="id" value="<?php echo $id ?>" />
+                <button class="btn btn-danger" type="submit">Yes, delete it!</button>
+                <a href="index.php"><button class="btn btn-warning" type="button">No, go back!</button></a>
+            </form>
+
         </div>
     </div>
     <?php include_once "footer.php" ?>
