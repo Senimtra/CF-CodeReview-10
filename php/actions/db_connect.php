@@ -1,17 +1,16 @@
-<?php 
+<?php
 
 $hostname = "127.0.0.1";
 $username = "root";
 $password = "";
-$dbname = "crud_example";
+$dbname = "cr10-gregor-biglibrary";
 
 // create connection
 $connect = mysqli_connect($hostname, $username, $password, $dbname);
 
 // check connection
-if($connect->connect_error) {
+if ($connect->connect_error) {
     die("Connection failed: " . $connect->connect_error);
-/*}else {
-    echo "Successfully Connected";*/
+} else {
+    // echo "Successfully Connected";
 }
-

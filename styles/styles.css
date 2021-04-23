@@ -1,4 +1,9 @@
-body {
+body,
+html {
   background-color: darkgrey;
+}
+
+tbody tr td img {
+  width: 6rem;
 }
 /*# sourceMappingURL=styles.css.map */
