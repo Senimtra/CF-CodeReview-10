@@ -1,12 +1,12 @@
-<?php 
+<?php
 require_once 'db_connect.php';
 
 if ($_POST) {
     $id = $_POST['id'];
-    $picture = $_POST['picture'];
-    ($picture =="product.png")?: unlink("../pictures/$picture");
+    // $picture = $_POST['picture'];
+    // ($picture =="product.png")?: unlink("../pictures/$picture");
 
-    $sql = "DELETE FROM products WHERE id = {$id}";
+    $sql = "DELETE FROM library_all_media WHERE id = {$id}";
     if ($connect->query($sql) === TRUE) {
         $class = "success";
         $message = "Successfully Deleted!";
@@ -22,20 +22,29 @@ if ($_POST) {
 
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <title>Delete</title>
-        <?php require_once '../components/boot.php'?>  
-    </head>
-    <body>
-        <div class="container">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delete Message</title>
+    <?php require_once '../components/bootstrap.php' ?>
+    <link rel="stylesheet" type="text/css" href="../../styles/styles.css">
+</head>
+
+<body>
+    <?php include_once "../header.php" ?>
+    <div class="container-fluid mx-auto px-5">
+        <div class="wrapIndex mx-5 bg-secondary">
             <div class="mt-3 mb-3">
                 <h1>Delete request response</h1>
             </div>
-            <div class="alert alert-<?=$class;?>" role="alert">
-                <p><?=$message;?></p>
+            <div class="alert alert-<?= $class; ?>" role="alert">
+                <p><?= $message; ?></p>
                 <a href='../index.php'><button class="btn btn-success" type='button'>Home</button></a>
             </div>
         </div>
-    </body>
+    </div>
+    <?php include_once "../footer.php" ?>
+</body>
+
 </html>
