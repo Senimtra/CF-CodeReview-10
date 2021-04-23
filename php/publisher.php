@@ -1,35 +1,23 @@
 <?php
 require_once 'actions/db_connect.php';
-$sql = "SELECT * FROM library_all_media";
+$sql = "SELECT DISTINCT id, pub_name FROM library_all_media GROUP BY pub_name";
 $result = mysqli_query($connect, $sql);
 $tbody = ''; //this variable will hold the body for the table
 if (mysqli_num_rows($result)  > 0) {
     $i = 0;
     while ($row = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
-        $i++;
-        if ($i < 100) {
-            $tbody .= "<tr>
-        <td>$row[id]</td>
-        <td><img src='$row[media_image]'></td>
-        <td>$row[media_title]<br>$row[media_type]<br>$row[media_date]</td>
-        <td>$row[media_descr]<br>$row[pub_name]</td>
-        <td><a href='delete.php?id=" . $row['id'] . "'><button class='btn btn-danger btn-sm' type='button'>Delete</button></a></td>
-        <td><a href='update.php?id=" . $row['id'] . "'><button class='btn btn-warning btn-sm' type='button'>Update</button></a></td>
-        <td><a href='details.php?id=" . $row['id'] . "'><button class='btn btn-success btn-sm' type='button'>Show Media</button></a></td>
-            </tr>";
-        } else {
-            break;
-        }
 
-        /* <td><img class='img-thumbnail' src='pictures/" . $row['picture'] . "'</td>
-            <td><a href='update.php?id=" . $row['id'] . "'><button class='btn btn-primary btn-sm' type='button'>Edit</button></a>
-             */
+        $tbody .= "<tr>
+        <td>$row[id]</td>
+        <td>$row[pub_name]</td>
+
+        <td><a href='actions/a_publisher.php?pub_name=" . $row['pub_name'] . "'><button class='btn btn-primary btn-sm' type='button'>Media</button></a></td>
+
+            </tr>";
     };
 } else {
     $tbody =  "<tr><td colspan='5'><center>No Data Available </center></td></tr>";
 }
-
-$connect->close();
 ?>
 
 <!DOCTYPE html>

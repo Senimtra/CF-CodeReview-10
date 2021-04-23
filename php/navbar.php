@@ -11,7 +11,8 @@
                         <div class="navbar-nav">
                             <a class="nav-link active" aria-current="page" href="index.php">Home</a>
                             <a class="nav-link active" aria-current="page" href="create.php">Add Media</a>
-                            <a class="nav-link active" aria-current="page" href="error.php">Error</a>
+                            <a class="nav-link active" aria-current="page" href="publisher.php">Publisher</a>
+                            <!-- <a class="nav-link active" aria-current="page" href="error.php">Error</a> -->
                         </div>
                     </div>
                 </div>
