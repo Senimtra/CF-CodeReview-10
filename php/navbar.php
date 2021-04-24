@@ -3,7 +3,7 @@
         <div class="wrapSideOut mx-lg-5">
             <div class="wrapSideIn mx-lg-5">
                 <div class="wrapIndex mx-5">
-                    <div id="groundNav">
+                    <div id="groundInd">
                         <div id="borderInd">
                             <nav class="navbar navbar-expand navbar-light bg-light">
                                 <div class="container-fluid">

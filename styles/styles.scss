@@ -7,6 +7,18 @@ tbody tr td img {
   width: 4rem;
 }
 
+// ### Hide the scrollbar in Chrome, Safari and Opera ###
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+// ### Hide the scrollbar in Firefox ###
+
+html {
+  scrollbar-width: none;
+}
+
 #heroImg {
   border-top-left-radius: calc(0.2vw + 0.2vh + 0.1vmin);
   border-top-right-radius: calc(0.2vw + 0.2vh + 0.1vmin);
@@ -49,24 +61,20 @@ img {
   border-right: calc(0.6vw + 0.6vh + 0.3vmin) solid #432818;
 }
 
-#groundNav {
-  border-left: calc(0.4vw + 0.4vh + 0.2vmin) solid #99582a;
-  border-right: calc(0.4vw + 0.4vh + 0.2vmin) solid #99582a;
-  background-color: #99582a;
-}
-
 #groundInd {
   border-left: calc(0.4vw + 0.4vh + 0.2vmin) solid #99582a;
   border-right: calc(0.4vw + 0.4vh + 0.2vmin) solid #99582a;
   background-color: #99582a;
 }
 
-.table {
-  border: 1px solid green;
-  padding: 0;
-  overflow: hidden;
+tbody {
   background-color: #c2bdaf;
 }
+
+// tr td {
+//   padding: 0 !important;
+//   margin: 0 !important;
+// }
 
 #FooterImg {
   height: 6vh;
@@ -88,5 +96,4 @@ img {
   border-bottom-left-radius: calc(0.3vw + 0.3vh + 0.15vmin);
   border-bottom-right-radius: calc(0.3vw + 0.3vh + 0.15vmin);
   background-color: #432818;
-  border: 1px solid white;
 }
