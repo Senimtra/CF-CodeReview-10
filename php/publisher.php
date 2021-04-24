@@ -1,6 +1,6 @@
 <?php
 require_once 'actions/db_connect.php';
-$sql = "SELECT DISTINCT id, pub_name FROM library_all_media GROUP BY pub_name";
+$sql = "SELECT DISTINCT pub_name, pub_address, pub_size FROM library_all_media GROUP BY pub_name";
 $result = mysqli_query($connect, $sql);
 $tbody = '';
 if (mysqli_num_rows($result)  > 0) {
@@ -8,10 +8,14 @@ if (mysqli_num_rows($result)  > 0) {
     while ($row = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
 
         $tbody .= "<tr>
-        <td>$row[id]</td>
-        <td>$row[pub_name]</td>
+        <td>
+        <div class='card p-1'>
+        <div><strong>$row[pub_name]</strong>&nbsp;|&nbsp;<i>$row[pub_size]&nbsp;size</i></div>
+        <div>$row[pub_address]</div>
+        </div>
+        </td>
 
-        <td><a href='actions/a_publisher.php?pub_name=" . $row['pub_name'] . "'><button class='btn btn-primary btn-sm' type='button'>stored Media</button></a></td>
+        <td><a href='actions/a_publisher.php?pub_name=" . $row['pub_name'] . "'><button class='btn btn-primary btn-sm btn-pub' type='button'>stored&nbsp;Media</button></a></td>
 
             </tr>";
     };

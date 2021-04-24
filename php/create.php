@@ -23,7 +23,7 @@
                                     <table class="table table-striped mb-0">
                                         <tr>
                                             <td colspan="2">
-                                                <legend class='h2'>Update Media</legend>
+                                                <legend class='h2'>Add Media</legend>
                                             </td>
                                         </tr>
                                         <tr>
