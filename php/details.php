@@ -43,20 +43,34 @@ if ($_GET['id']) {
     <?php include_once "header.php" ?>
     <?php include_once "navbar.php" ?>
     <div class="container-fluid mx-auto px-5">
-        <div class="wrapIndex mx-5 bg-secondary">
-            <div>
-                <p><?php echo $media_title ?></p>
-                <p><?php echo $media_type ?></p>
-                <p><?php echo $media_date ?></p>
-                <p><?php echo $media_isbn ?></p>
-                <p><?php echo $media_descr ?></p>
-                <p><?php echo $media_image ?></p>
-                <p><?php echo $media_status ?></p>
-                <p><?php echo $author_fname ?></p>
-                <p><?php echo $author_lname ?></p>
-                <p><?php echo $pub_name ?></p>
-                <p><?php echo $pub_address ?></p>
-                <p><?php echo $pub_size ?></p>
+        <div class="wrapSideOut mx-lg-5">
+            <div class="wrapSideIn mx-lg-5">
+                <div class="wrapIndex mx-5">
+                    <div id="groundInd">
+                        <div id="borderInd">
+                            <table class="table table-striped mb-0">
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <p><?php echo $media_title ?></p>
+                                            <p><?php echo $media_type ?></p>
+                                            <p><?php echo $media_date ?></p>
+                                            <p><?php echo $media_isbn ?></p>
+                                            <p><?php echo $media_descr ?></p>
+                                            <p><?php echo $media_image ?></p>
+                                            <p><?php echo $media_status ?></p>
+                                            <p><?php echo $author_fname ?></p>
+                                            <p><?php echo $author_lname ?></p>
+                                            <p><?php echo $pub_name ?></p>
+                                            <p><?php echo $pub_address ?></p>
+                                            <p><?php echo $pub_size ?></p>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

@@ -38,14 +38,20 @@ if (mysqli_num_rows($result)  > 0) {
     <?php include_once "../header.php" ?>
     <?php include_once "../navbar_a.php" ?>
     <div class="container-fluid mx-auto px-5">
-        <div class="wrapIndex mx-5 bg-secondary">
-
-            <table class='table table-striped'>
-                <tbody>
-                    <?= $tbody; ?>
-                </tbody>
-            </table>
-
+        <div class="wrapSideOut mx-lg-5">
+            <div class="wrapSideIn mx-lg-5">
+                <div class="wrapIndex mx-5">
+                    <div id="groundInd">
+                        <div id="borderInd">
+                            <table class="table table-striped mb-0">
+                                <tbody>
+                                    <?= $tbody; ?>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
     <?php include_once "../footer.php" ?>

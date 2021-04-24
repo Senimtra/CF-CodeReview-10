@@ -28,7 +28,7 @@ $connect->close();
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Big Library</title>
+    <title>Big Library Books</title>
     <?php require_once 'components/bootstrap.php' ?>
     <link rel="stylesheet" type="text/css" href="../styles/styles.css">
 </head>

@@ -35,13 +35,31 @@ if ($_POST) {
     <?php include_once "../header.php" ?>
     <?php include_once "../navbar_a.php" ?>
     <div class="container-fluid mx-auto px-5">
-        <div class="wrapIndex mx-5 bg-secondary">
-            <div class="mt-3 mb-3">
-                <h1>Delete request response</h1>
-            </div>
-            <div class="alert alert-<?= $class; ?>" role="alert">
-                <p><?= $message; ?></p>
-                <a href='../index.php'><button class="btn btn-success" type='button'>Home</button></a>
+        <div class="wrapSideOut mx-lg-5">
+            <div class="wrapSideIn mx-lg-5">
+                <div class="wrapIndex mx-5">
+                    <div id="groundInd">
+                        <div id="borderInd">
+                            <table class="table table-striped mb-0">
+                                <tr>
+                                    <td>
+                                        <div class="mt-3 mb-3">
+                                            <h1>Delete request response</h1>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="alert alert-<?= $class; ?>" role="alert">
+                                            <p><?= $message; ?></p>
+                                            <a href='../index.php'><button class="btn btn-success" type='button'>Home</button></a>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

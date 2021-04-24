@@ -32,22 +32,37 @@ if ($_GET['id']) {
     <?php include_once "header.php" ?>
     <?php include_once "navbar.php" ?>
     <div class="container-fluid mx-auto px-5">
-        <div class="wrapIndex mx-5 bg-secondary">
-
-            <h5>You have selected the data below:</h5>
-            <table class="table w-75 mt-3">
-                <tr>
-                    <td><?php echo $name ?></td>
-                </tr>
-            </table>
-
-            <h3 class="mb-4">Do you really want to delete this product?</h3>
-            <form action="actions/a_delete.php" method="post">
-                <input type="hidden" name="id" value="<?php echo $id ?>" />
-                <button class="btn btn-danger" type="submit">Yes, delete it!</button>
-                <a href="index.php"><button class="btn btn-warning" type="button">No, go back!</button></a>
-            </form>
-
+        <div class="wrapSideOut mx-lg-5">
+            <div class="wrapSideIn mx-lg-5">
+                <div class="wrapIndex mx-5">
+                    <div id="groundInd">
+                        <div id="borderInd">
+                            <table class="table table-striped mb-0">
+                                <tr>
+                                    <td>
+                                        <h5>You have selected the data below:</h5>
+                                        <table class="table w-75 mt-3">
+                                            <tr>
+                                                <td><?php echo $name ?></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <h3 class="mb-4">Do you really want to delete this product?</h3>
+                                        <form action="actions/a_delete.php" method="post">
+                                            <input type="hidden" name="id" value="<?php echo $id ?>" />
+                                            <button class="btn btn-danger" type="submit">Yes, delete it!</button>
+                                            <a href="index.php"><button class="btn btn-warning" type="button">No, go back!</button></a>
+                                        </form>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
     <?php include_once "footer.php" ?>

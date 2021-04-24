@@ -19,7 +19,6 @@
                                             <a class="nav-link active" aria-current="page" href="dvds.php">DVDs</a>
                                             <a class="nav-link active" aria-current="page" href="books.php">Books</a>
                                             <a class="nav-link active" aria-current="page" href="publisher.php">Publisher</a>
-                                            <!-- <a class="nav-link active" aria-current="page" href="error.php">Error</a> -->
                                         </div>
                                     </div>
                                 </div>
