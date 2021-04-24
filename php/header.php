@@ -1,7 +1,15 @@
 <body>
-    <div class="container-fluid mx-auto px-5">
-        <div class="wrapHero m-5 mb-0 bg-dark">
-            <div id="heroImg" class="bg-warning"></div>
+    <div class="container-fluid mx-auto pt-2 px-5">
+        <div class="wrapSideOut mx-lg-5">
+            <div class="wrapSideIn mx-lg-5">
+                <div class="wrapHero m-5 mb-0">
+                    <div id="groundHead">
+                        <div id="borderHead">
+                            <div id="heroImg"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </body>

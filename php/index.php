@@ -7,7 +7,7 @@ if (mysqli_num_rows($result)  > 0) {
     $i = 0;
     while ($row = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
         $i++;
-        if ($i < 100) {
+        if ($i < 5) {
             $tbody .= "<tr>
         <td>$row[id]</td>
         <td><img src='$row[media_image]'></td>
@@ -47,12 +47,20 @@ $connect->close();
     <?php include_once "header.php" ?>
     <?php include_once "navbar.php" ?>
     <div class="container-fluid mx-auto px-5">
-        <div class="wrapIndex mx-5 bg-secondary">
-            <table class='table table-striped'>
-                <tbody>
-                    <?= $tbody; ?>
-                </tbody>
-            </table>
+        <div class="wrapSideOut mx-lg-5">
+            <div class="wrapSideIn mx-lg-5">
+                <div class="wrapIndex mx-5">
+                    <div id="groundInd">
+                        <div id="borderInd">
+                            <table class='table table-striped'>
+                                <tbody>
+                                    <?= $tbody; ?>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
     <?php include_once "footer.php" ?>

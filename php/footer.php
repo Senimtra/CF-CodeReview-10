@@ -1,7 +1,15 @@
 <body>
-    <div class="container-fluid mx-auto px-5">
-        <div class="wrapFooter m-5 mt-0 bg-dark">
-            <div id="footer" class="bg-warning"></div>
+    <div class="container-fluid mx-auto p-5 pt-0">
+        <div class="wrapSideOut mx-lg-5">
+            <div class="wrapSideIn mx-lg-5">
+                <div class="wrapHero mx-5 mb-0">
+                    <div id="groundFoot">
+                        <div id="borderFoot">
+                            <div id="FooterImg"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </body>
