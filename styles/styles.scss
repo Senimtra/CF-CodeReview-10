@@ -4,15 +4,28 @@ body {
 }
 
 tbody tr td img {
-  width: 4rem;
+  width: 100%;
+  border-radius: 0.3rem;
+  box-shadow: 0px 1px 2px black;
 }
 
 table {
   width: 100%;
 }
 
+td {
+  border: 0;
+}
+
 .card {
   font-size: calc(0.5vw + 0.5vh + 0.25vmin);
+  background-color: #f5efe1;
+  box-shadow: 0px 0px 2px black;
+}
+
+.cardIndex {
+  background-color: #f5efe1;
+  box-shadow: 0px 0px 2px black;
 }
 
 .btn {

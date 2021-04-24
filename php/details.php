@@ -70,7 +70,7 @@ if ($_GET['id']) {
                                                             </p>
                                                             <p class="card-text">Publisher size: <?php echo $pub_size ?></p>
                                                             <p class="card-text">ISBN: <?php echo $media_isbn ?></p>
-                                                            <p class="card-text"><strong class="text-muted">Status: <?php echo $media_status ?></strong></p>
+                                                            <p class="card-text"><strong class="text-muted">Status: <?php echo $media_status ?>&nbsp;&nbsp;|&nbsp;&nbsp;id: <?php echo $id ?></strong></p>
                                                         </div>
                                                     </div>
                                                 </div>

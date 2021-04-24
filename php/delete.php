@@ -40,17 +40,18 @@ if ($_GET['id']) {
                             <table class="table table-striped mb-0">
                                 <tr>
                                     <td>
-                                        <h5>You have selected the data below:</h5>
                                         <table class="table w-75 mt-3">
                                             <tr>
-                                                <td><?php echo $name ?></td>
+                                                <td>
+                                                    <h1><?php echo $name ?></h1>
+                                                </td>
                                             </tr>
                                         </table>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td>
-                                        <h3 class="mb-4">Do you really want to delete this product?</h3>
+                                        <h3 class="mb-4">Do you really want to delete this media?</h3>
                                         <form action="actions/a_delete.php" method="post">
                                             <input type="hidden" name="id" value="<?php echo $id ?>" />
                                             <button class="btn btn-danger" type="submit">Yes, delete it!</button>
