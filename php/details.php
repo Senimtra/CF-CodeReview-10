@@ -57,7 +57,8 @@ if ($_GET['id']) {
                                                     <div class="col-md-4 cardImg">
                                                         <img src="<?php echo $media_image ?>" alt="...">
                                                     </div>
-                                                    <div class="col-md-8">
+                                                    <div class="col-md"></div>
+                                                    <div class="col-md-7">
                                                         <div class="card-body">
                                                             <h5 class="card-title"><?php echo $media_title ?></h5>
                                                             <p class="card-text"><?php echo $author_fname ?>&nbsp;<?php echo $author_lname ?>,&nbsp;<?php echo $media_date ?>,&nbsp;<?php echo $media_type ?></p>
