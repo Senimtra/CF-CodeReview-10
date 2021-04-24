@@ -1,10 +1,14 @@
-body,
-html {
-  background-color: darkgrey;
+body {
+  background-image: url("../images/background.jpg");
+  background-size: 100%;
 }
 
 tbody tr td img {
   width: 4rem;
+}
+
+.table {
+  font-size: calc(0.6vw + 0.6vh + 0.3vmin);
 }
 
 // ### Hide the scrollbar in Chrome, Safari and Opera ###
@@ -27,10 +31,6 @@ html {
   background-size: cover;
   background-repeat: no-repeat;
   width: 100%;
-}
-
-img {
-  border: 1px solid blue;
 }
 
 #borderHead {
@@ -59,23 +59,24 @@ img {
 #borderInd {
   border-left: calc(0.6vw + 0.6vh + 0.3vmin) solid #432818;
   border-right: calc(0.6vw + 0.6vh + 0.3vmin) solid #432818;
+  background-color: #c2bdaf;
   overflow-x: hidden;
 }
 
 #groundInd {
   border-left: calc(0.4vw + 0.4vh + 0.2vmin) solid #99582a;
   border-right: calc(0.4vw + 0.4vh + 0.2vmin) solid #99582a;
+  background-color: #99582a;
 }
 
 tbody {
   background-color: #c2bdaf;
 }
 
-// .details {
-//   background-color: #c2bdaf;
-//   font-size: 500%;
-//   color: red;
-// }
+.cardImg img {
+  width: 20vw;
+  border-radius: 0.3rem;
+}
 
 #FooterImg {
   height: 6vh;

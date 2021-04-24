@@ -52,18 +52,29 @@ if ($_GET['id']) {
                                 <tbody>
                                     <tr>
                                         <td>
-                                            <p><?php echo $media_title ?></p>
-                                            <p><?php echo $media_type ?></p>
-                                            <p><?php echo $media_date ?></p>
-                                            <p><?php echo $media_isbn ?></p>
-                                            <p><?php echo $media_descr ?></p>
-                                            <p><?php echo $media_image ?></p>
-                                            <p><?php echo $media_status ?></p>
-                                            <p><?php echo $author_fname ?></p>
-                                            <p><?php echo $author_lname ?></p>
-                                            <p><?php echo $pub_name ?></p>
-                                            <p><?php echo $pub_address ?></p>
-                                            <p><?php echo $pub_size ?></p>
+                                            <div class="card p-3 m-1">
+                                                <div class="row g-0">
+                                                    <div class="col-md-4 cardImg">
+                                                        <img src="<?php echo $media_image ?>" alt="...">
+                                                    </div>
+                                                    <div class="col-md-8">
+                                                        <div class="card-body">
+                                                            <h5 class="card-title"><?php echo $media_title ?></h5>
+                                                            <p class="card-text"><?php echo $author_fname ?>&nbsp;<?php echo $author_lname ?>,&nbsp;<?php echo $media_date ?>,&nbsp;<?php echo $media_type ?></p>
+                                                            <p class="card-text"><?php echo $media_descr ?></p>
+                                                            <p class="card-text">
+                                                            <div class="publisher d-flex">
+                                                                <div>Publisher:&nbsp;&nbsp;&nbsp;</div>
+                                                                <div><?php echo $pub_name ?><br><?php echo $pub_address ?></div>
+                                                            </div>
+                                                            </p>
+                                                            <p class="card-text">Publisher size: <?php echo $pub_size ?></p>
+                                                            <p class="card-text">ISBN: <?php echo $media_isbn ?></p>
+                                                            <p class="card-text"><strong class="text-muted">Status: <?php echo $media_status ?></strong></p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </td>
                                     </tr>
                                 </tbody>
