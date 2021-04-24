@@ -5,7 +5,7 @@
                 <div class="wrapIndex mx-5">
                     <div id="groundInd">
                         <div id="borderInd">
-                            <nav class="navbar navbar-expand navbar-light bg-light">
+                            <nav class="navbar navbar-expand-md navbar-light bg-light">
                                 <div class="container-fluid">
                                     <a class="navbar-brand" href="#">Big Library</a>
                                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">

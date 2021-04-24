@@ -55,12 +55,12 @@ img {
 #borderInd {
   border-left: calc(0.6vw + 0.6vh + 0.3vmin) solid #432818;
   border-right: calc(0.6vw + 0.6vh + 0.3vmin) solid #432818;
+  overflow-x: hidden;
 }
 
 #groundInd {
   border-left: calc(0.4vw + 0.4vh + 0.2vmin) solid #99582a;
   border-right: calc(0.4vw + 0.4vh + 0.2vmin) solid #99582a;
-  background-color: #99582a;
 }
 
 tbody {
