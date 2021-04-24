@@ -48,11 +48,11 @@ if ($_GET['id']) {
                 <div class="wrapIndex mx-5">
                     <div id="groundInd">
                         <div id="borderInd">
-                            <table class="table table-striped mb-0">
+                            <table>
                                 <tbody>
                                     <tr>
                                         <td>
-                                            <div class="card p-3 m-1">
+                                            <div class="card p-3 m-3">
                                                 <div class="row g-0">
                                                     <div class="col-md-4 cardImg">
                                                         <img src="<?php echo $media_image ?>" alt="...">
