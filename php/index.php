@@ -14,6 +14,7 @@ if (mysqli_num_rows($result)  > 0) {
                 <div class='col-md-6 p-3'>
                     <div class='card-body'>
                     <h5 class='card-title'>$row[media_title]</h5>
+                    <p class='card-text'>$row[author_fname]&nbsp;$row[author_lname]</p>
                     <p class='card-text'>$row[media_descr]</p>
                     <p class='card-text'><small class='text-muted'><strong>$row[media_type]</strong>&nbsp;|&nbsp;$row[pub_name]</small></p>
                     </div>
