@@ -15,11 +15,7 @@ if ($_POST) {
     $pub_address = $_POST['p_address'];
     $pub_size = $_POST['p_size'];
 
-    // if ($media_title != "") {
-    //     header("location: ../error.php");
-    // } else {
-    //     echo "leer";
-    // }
+    // ### Insert record ###
 
     $sql = "INSERT INTO library_all_media (media_title, media_type, media_date, media_isbn, media_descr, media_image, media_status, author_fname, author_lname, pub_name, pub_address, pub_size) VALUES ('$media_title', '$media_type', '$media_date', '$media_isbn', '$media_descr', '$media_image', '$media_status', '$author_fname', '$author_lname', '$pub_name', '$pub_address', '$pub_size')";
 

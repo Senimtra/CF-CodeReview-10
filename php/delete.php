@@ -3,6 +3,9 @@ require_once 'actions/db_connect.php';
 
 if ($_GET['id']) {
     $id = $_GET['id'];
+
+    // ### Select record to delete ###
+
     $sql = "SELECT * FROM library_all_media WHERE id = {$id}";
     $result = $connect->query($sql);
     $data = $result->fetch_assoc();

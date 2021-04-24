@@ -16,6 +16,8 @@ if ($_POST) {
     $pub_address = $_POST['p_address'];
     $pub_size = $_POST['p_size'];
 
+    // ### Update record ###
+
     $sql = "UPDATE library_all_media SET media_title = '$media_title', media_type = '$media_type', media_date = '$media_date', media_isbn = '$media_isbn', media_descr = '$media_descr', media_image = '$media_image', media_status = '$media_status', author_fname = '$author_fname', author_lname = '$author_lname', pub_name = '$pub_name', pub_address = '$pub_address', pub_size = '$pub_size' WHERE id = {$id}";
 
     if ($connect->query($sql) === TRUE) {

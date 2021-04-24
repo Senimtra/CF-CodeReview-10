@@ -19,6 +19,9 @@
                     <div id="groundInd">
                         <div id="borderInd">
                             <fieldset>
+
+                                <!-- ### Create form begins here ### -->
+
                                 <form action="actions/a_create.php" method="post">
                                     <table class="table table-striped mb-0">
                                         <tr>
@@ -75,7 +78,7 @@
                                             <td><input class='form-control' type="text" name="p_size" placeholder="Size of the publisher" /></td>
                                         </tr>
                                         <tr>
-                                            <td><button class='btn btn-success' type="submit">Insert media</button></td>
+                                            <td><button class='btn btn-success btn-pub' type="submit">Insert media</button></td>
                                             <td><a href="index.php"><button class='btn btn-warning' type="button">Home</button></a></td>
                                         </tr>
                                     </table>

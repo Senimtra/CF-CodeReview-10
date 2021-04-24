@@ -5,6 +5,9 @@
                 <div class="wrapHero mx-5 mb-0">
                     <div id="groundFoot">
                         <div class="borderFoot pb-4 pt-4 px-3">
+
+                            <!-- ### Social media ### -->
+
                             <div>
                                 <h3>Senimtra's Library</h3>
                             </div>

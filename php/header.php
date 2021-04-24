@@ -5,6 +5,9 @@
                 <div class="wrapHero m-5 mb-0">
                     <div id="groundHead">
                         <div id="borderHead">
+
+                            <!-- ### Hero background image ### -->
+
                             <div id="heroImg"></div>
                         </div>
                     </div>

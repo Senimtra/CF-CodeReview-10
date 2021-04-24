@@ -1,12 +1,14 @@
 <?php
 require_once 'db_connect.php';
 $pub_name = $_GET['pub_name'];
+
+// ### Select chosen publisher records ###
+
 $sql = "SELECT * FROM library_all_media WHERE pub_name = '$pub_name'";
 $result = mysqli_query($connect, $sql);
 $tbody = '';
 if (mysqli_num_rows($result)  > 0) {
     while ($row = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
-
         $tbody .= "<tr>
         <td>
         <div class='card cardIndex mx-2 my-0'>
@@ -32,7 +34,6 @@ if (mysqli_num_rows($result)  > 0) {
 } else {
     $tbody =  "<tr><td colspan='5'><center>No Data Available </center></td></tr>";
 }
-
 ?>
 
 <!DOCTYPE html>

@@ -13,6 +13,9 @@
                                             <span class="navbar-toggler-icon"></span>
                                         </button>
                                         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+
+                                            <!-- ### Navbar buttons ### -->
+
                                             <div class="navbar-nav">
                                                 <a class="nav-link active" aria-current="page" href="../index.php"><button class='btn btn-dark' type='button'>Home</button></a>
                                                 <a class="nav-link active" aria-current="page" href="../create.php"><button class='btn btn-dark' type='button'>Add&nbsp;Media</button></a>

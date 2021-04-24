@@ -5,12 +5,12 @@ $username = "root";
 $password = "";
 $dbname = "cr10-gregor-biglibrary";
 
-// create connection
 $connect = mysqli_connect($hostname, $username, $password, $dbname);
 
-// check connection
+// ### Check connection status
+
 if ($connect->connect_error) {
     die("Connection failed: " . $connect->connect_error);
 } else {
-    // echo "Successfully Connected";
+    // echo "Connected!";
 }

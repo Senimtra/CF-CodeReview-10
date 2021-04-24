@@ -1,8 +1,11 @@
 <?php
 require_once 'actions/db_connect.php';
+
+// ### Select all records from db ###
+
 $sql = "SELECT * FROM library_all_media";
 $result = mysqli_query($connect, $sql);
-$tbody = ''; //this variable will hold the body for the table
+$tbody = '';
 if (mysqli_num_rows($result)  > 0) {
     while ($row = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
         $tbody .= "<tr>

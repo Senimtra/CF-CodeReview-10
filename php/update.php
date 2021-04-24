@@ -3,6 +3,9 @@ require_once 'actions/db_connect.php';
 
 if ($_GET['id']) {
     $id = $_GET['id'];
+
+    // ### Select record (update) ###
+
     $sql = "SELECT * FROM library_all_media WHERE id = {$id}";
     $result = $connect->query($sql);
     if ($result->num_rows == 1) {
@@ -49,6 +52,9 @@ if ($_GET['id']) {
                     <div id="groundInd">
                         <div id="borderInd">
                             <fieldset>
+
+                                <!-- ### Update form begins here ### -->
+
                                 <form action="actions/a_update.php" method="post">
                                     <table class="table table-striped mb-0">
                                         <tr>

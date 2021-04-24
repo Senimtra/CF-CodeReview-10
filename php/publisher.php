@@ -1,5 +1,8 @@
 <?php
 require_once 'actions/db_connect.php';
+
+// ### SELECT all publishers (distinct) ###
+
 $sql = "SELECT DISTINCT pub_name, pub_address, pub_size FROM library_all_media GROUP BY pub_name";
 $result = mysqli_query($connect, $sql);
 $tbody = '';

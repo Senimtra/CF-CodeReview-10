@@ -3,8 +3,8 @@ require_once 'db_connect.php';
 
 if ($_POST) {
     $id = $_POST['id'];
-    // $picture = $_POST['picture'];
-    // ($picture =="product.png")?: unlink("../pictures/$picture");
+
+    // ### Delete record ###
 
     $sql = "DELETE FROM library_all_media WHERE id = {$id}";
     if ($connect->query($sql) === TRUE) {

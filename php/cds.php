@@ -1,5 +1,8 @@
 <?php
 require_once 'actions/db_connect.php';
+
+// ### Select only CDs ###
+
 $sql = "SELECT * FROM library_all_media WHERE media_type = 'cd'";
 $result = mysqli_query($connect, $sql);
 $tbody = ''; //this variable will hold the body for the table
