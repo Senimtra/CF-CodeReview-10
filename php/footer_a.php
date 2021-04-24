@@ -9,10 +9,10 @@
                                 <h3>Senimtra's Library</h3>
                             </div>
                             <div id="social" class="gap-2 d-flex align-items-center">
-                                <a href="https://web.whatsapp.com/" target="_blank"><img src="../images/whatsapp.png" alt="WhatsApp-Logo" /></a>
-                                <a href="https://twitter.com/" target="_blank"><img src="../images/instagram.png" alt="Twitter-Logo" /></a>
-                                <a href="https://www.facebook.com/" target="_blank"><img src="../images/twitter.png" alt="Facebook-Logo" /></a>
-                                <a href="https://www.instagram.com/" target="_blank"><img src="../images/facebook.png" alt="Instagram-Logo" /></a>
+                                <a href="https://web.whatsapp.com/" target="_blank"><img src="../../images/whatsapp.png" alt="WhatsApp-Logo" /></a>
+                                <a href="https://twitter.com/" target="_blank"><img src="../../images/instagram.png" alt="Twitter-Logo" /></a>
+                                <a href="https://www.facebook.com/" target="_blank"><img src="../../images/twitter.png" alt="Facebook-Logo" /></a>
+                                <a href="https://www.instagram.com/" target="_blank"><img src="../../images/facebook.png" alt="Instagram-Logo" /></a>
                             </div>
                         </div>
                     </div>

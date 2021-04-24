@@ -135,4 +135,10 @@ tbody {
   }
   display: flex;
   justify-content: space-between;
+  font-family: "Noto Serif", serif;
+  div {
+    text-shadow: 0 0 2px black, 0 0 2px black, 0 0 2px black, 0 0 2px black,
+      0 0 2px black, 0 0 2px black, 0 0 2px black, 0 0 2px black;
+    color: #c2bdaf;
+  }
 }

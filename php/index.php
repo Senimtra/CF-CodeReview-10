@@ -42,6 +42,7 @@ $connect->close();
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Big Library</title>
     <?php require_once 'components/bootstrap.php' ?>
+    <?php require_once 'components/googlefont.php' ?>
     <link rel="stylesheet" type="text/css" href="../styles/styles.css">
 </head>
 
